@@ -1,0 +1,127 @@
+[2024-12-12 18:36:30,862] DEBUG in app: Response: 500 INTERNAL SERVER ERROR - Data: An error occurred
+[2024-12-12 18:36:30,863] INFO in _internal: 127.0.0.1 - - [12/Dec/2024 18:36:30] "[35m[1mGET /films HTTP/1.1[0m" 500 -
+[2024-12-12 18:36:30,938] DEBUG in app: Request: GET http://127.0.0.1:8000/favicon.ico - Params: ImmutableMultiDict([]) - Body: 
+[2024-12-12 18:36:30,938] ERROR in app: Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/werkzeug/routing/map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+[2024-12-12 18:36:30,939] DEBUG in app: Response: 500 INTERNAL SERVER ERROR - Data: An error occurred
+[2024-12-12 18:36:30,939] INFO in _internal: 127.0.0.1 - - [12/Dec/2024 18:36:30] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+[2024-12-12 18:36:31,530] DEBUG in app: Request: GET http://127.0.0.1:8000/films - Params: ImmutableMultiDict([]) - Body: 
+[2024-12-12 18:36:31,531] ERROR in app: Exception: (psycopg2.errors.UndefinedColumn) column film.filmName does not exist
+LINE 1: SELECT film.id AS film_id, film."filmName" AS "film_filmName...
+                                   ^
+HINT:  Perhaps you meant to reference the column "film.filmname".
+
+[SQL: SELECT film.id AS film_id, film."filmName" AS "film_filmName", film."urlImage" AS "film_urlImage", film.genre AS film_genre, film."dateRelease" AS "film_dateRelease" 
+FROM film]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedColumn: column film.filmName does not exist
+LINE 1: SELECT film.id AS film_id, film."filmName" AS "film_filmName...
+                                   ^
+HINT:  Perhaps you meant to reference the column "film.filmname".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/unusmustafaev/Es_lab/lab6/app.py", line 153, in get_films
+    films = Film.query.all()
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2693, in all
+    return self._iter().all()  # type: ignore
+           ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2847, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2308, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2190, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 516, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1639, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1988, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2343, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column film.filmName does not exist
+LINE 1: SELECT film.id AS film_id, film."filmName" AS "film_filmName...
+                                   ^
+HINT:  Perhaps you meant to reference the column "film.filmname".
+
+[SQL: SELECT film.id AS film_id, film."filmName" AS "film_filmName", film."urlImage" AS "film_urlImage", film.genre AS film_genre, film."dateRelease" AS "film_dateRelease" 
+FROM film]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[2024-12-12 18:36:31,536] DEBUG in app: Response: 500 INTERNAL SERVER ERROR - Data: An error occurred
+[2024-12-12 18:36:31,537] INFO in _internal: 127.0.0.1 - - [12/Dec/2024 18:36:31] "[35m[1mGET /films HTTP/1.1[0m" 500 -
+[2024-12-12 18:36:31,556] DEBUG in app: Request: GET http://127.0.0.1:8000/favicon.ico - Params: ImmutableMultiDict([]) - Body: 
+[2024-12-12 18:36:31,556] ERROR in app: Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/werkzeug/routing/map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+[2024-12-12 18:36:31,557] DEBUG in app: Response: 500 INTERNAL SERVER ERROR - Data: An error occurred
+[2024-12-12 18:36:31,557] INFO in _internal: 127.0.0.1 - - [12/Dec/2024 18:36:31] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+[2024-12-12 18:39:40,332] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.119.106.254:8000
+[2024-12-12 18:39:40,332] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.119.106.254:8000
+[2024-12-12 18:39:40,332] [33mPress CTRL+C to quit[0m
+[2024-12-12 18:39:40,334]  * Restarting with stat

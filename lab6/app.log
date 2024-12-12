@@ -1,0 +1,67 @@
+[2024-12-12 18:48:24,326] INFO in _internal:  * Restarting with stat
+[2024-12-12 18:48:24,567] WARNING in _internal:  * Debugger is active!
+[2024-12-12 18:48:24,567]  * Debugger is active!
+[2024-12-12 18:48:24,575] INFO in _internal:  * Debugger PIN: 111-422-814
+[2024-12-12 18:48:24,575]  * Debugger PIN: 111-422-814
+[2024-12-12 18:48:56,831] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.119.106.254:8000
+[2024-12-12 18:48:56,831] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.119.106.254:8000
+[2024-12-12 18:48:56,831] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-12-12 18:48:56,831] [33mPress CTRL+C to quit[0m
+[2024-12-12 18:48:56,832] INFO in _internal:  * Restarting with stat
+[2024-12-12 18:48:56,832]  * Restarting with stat
+[2024-12-12 18:48:57,064] WARNING in _internal:  * Debugger is active!
+[2024-12-12 18:48:57,064]  * Debugger is active!
+[2024-12-12 18:48:57,072] INFO in _internal:  * Debugger PIN: 111-422-814
+[2024-12-12 18:48:57,072]  * Debugger PIN: 111-422-814
+[2024-12-12 18:50:22,433] DEBUG in app: Request: GET http://127.0.0.1:8000/films - Params: ImmutableMultiDict([]) - Body: 
+[2024-12-12 18:50:22,433] Request: GET http://127.0.0.1:8000/films - Params: ImmutableMultiDict([]) - Body: 
+[2024-12-12 18:50:22,634] DEBUG in app: Response: 200 OK - Data: [
+  {
+    "dateRelease": "rwerwet",
+    "filmName": "qwrqwrq",
+    "genre": "ewrwer",
+    "id": 1,
+    "urlImage": 234
+  }
+]
+
+[2024-12-12 18:50:22,634] Response: 200 OK - Data: [
+  {
+    "dateRelease": "rwerwet",
+    "filmName": "qwrqwrq",
+    "genre": "ewrwer",
+    "id": 1,
+    "urlImage": 234
+  }
+]
+
+[2024-12-12 18:50:22,635] INFO in _internal: 127.0.0.1 - - [12/Dec/2024 18:50:22] "GET /films HTTP/1.1" 200 -
+[2024-12-12 18:50:22,635] 127.0.0.1 - - [12/Dec/2024 18:50:22] "GET /films HTTP/1.1" 200 -
+[2024-12-12 18:50:29,610] DEBUG in app: Request: GET http://127.0.0.1:8000/login - Params: ImmutableMultiDict([]) - Body: 
+[2024-12-12 18:50:29,610] Request: GET http://127.0.0.1:8000/login - Params: ImmutableMultiDict([]) - Body: 
+[2024-12-12 18:50:29,610] INFO in app: Successful login - User: username123 - IP: 127.0.0.1
+[2024-12-12 18:50:29,610] Successful login - User: username123 - IP: 127.0.0.1
+[2024-12-12 18:50:29,610] DEBUG in app: Response: 200 OK - Data: Logged in
+[2024-12-12 18:50:29,610] Response: 200 OK - Data: Logged in
+[2024-12-12 18:50:29,610] INFO in _internal: 127.0.0.1 - - [12/Dec/2024 18:50:29] "GET /login HTTP/1.1" 200 -
+[2024-12-12 18:50:29,610] 127.0.0.1 - - [12/Dec/2024 18:50:29] "GET /login HTTP/1.1" 200 -
+[2024-12-12 18:50:40,161] DEBUG in app: Request: GET http://127.0.0.1:8000/set_log_level/DEBUG - Params: ImmutableMultiDict([]) - Body: 
+[2024-12-12 18:50:40,161] Request: GET http://127.0.0.1:8000/set_log_level/DEBUG - Params: ImmutableMultiDict([]) - Body: 
+[2024-12-12 18:50:40,162] DEBUG in app: Response: 200 OK - Data: Log level set to DEBUG
+[2024-12-12 18:50:40,162] Response: 200 OK - Data: Log level set to DEBUG
+[2024-12-12 18:50:40,162] INFO in _internal: 127.0.0.1 - - [12/Dec/2024 18:50:40] "GET /set_log_level/DEBUG HTTP/1.1" 200 -
+[2024-12-12 18:50:40,162] 127.0.0.1 - - [12/Dec/2024 18:50:40] "GET /set_log_level/DEBUG HTTP/1.1" 200 -
+[2024-12-12 18:50:46,866] DEBUG in app: Request: GET http://127.0.0.1:8000/some_route - Params: ImmutableMultiDict([]) - Body: 
+[2024-12-12 18:50:46,866] Request: GET http://127.0.0.1:8000/some_route - Params: ImmutableMultiDict([]) - Body: 
+[2024-12-12 18:50:46,867] INFO in app: some_route took 0.0000 seconds
+[2024-12-12 18:50:46,867] some_route took 0.0000 seconds
+[2024-12-12 18:50:46,868] DEBUG in app: Response: 200 OK - Data: Hello, World!
+[2024-12-12 18:50:46,868] Response: 200 OK - Data: Hello, World!
+[2024-12-12 18:50:46,868] INFO in _internal: 127.0.0.1 - - [12/Dec/2024 18:50:46] "GET /some_route HTTP/1.1" 200 -
+[2024-12-12 18:50:46,868] 127.0.0.1 - - [12/Dec/2024 18:50:46] "GET /some_route HTTP/1.1" 200 -
