@@ -1,0 +1,32 @@
+services:
+  postgres:
+    image: postgres
+    container_name: my-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: car
+    ports:
+      - "5433:5433"
+    networks:
+      - my-network
+
+  server:
+    build: backend/
+    command: python ./app.py
+    ports:
+      - "8000:8000"
+    volumes:
+      - /Users/unusmustafaev/Documents/server_data:/my-docker
+    networks:
+      - my-network
+    depends_on:
+      - postgres
+
+  
+# volumes:
+#   server_data: 
+
+networks:
+  my-network:
+    driver: bridge

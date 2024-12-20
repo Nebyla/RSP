@@ -1,0 +1,124 @@
+[2024-12-12 18:40:31,511] DEBUG in app: Response: 500 INTERNAL SERVER ERROR - Data: An error occurred
+[2024-12-12 18:40:31,512] INFO in _internal: 127.0.0.1 - - [12/Dec/2024 18:40:31] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+[2024-12-12 18:40:44,987] DEBUG in app: Request: GET http://127.0.0.1:8000/films - Params: ImmutableMultiDict([]) - Body: 
+[2024-12-12 18:40:44,990] DEBUG in app: Response: 200 OK - Data: [
+  {
+    "dateRelease": "rwerwet",
+    "filmName": "qwrqwrq",
+    "genre": "ewrwer",
+    "id": 1,
+    "urlImage": 234
+  }
+]
+
+[2024-12-12 18:40:44,990] INFO in _internal: 127.0.0.1 - - [12/Dec/2024 18:40:44] "GET /films HTTP/1.1" 200 -
+[2024-12-12 18:40:45,015] DEBUG in app: Request: GET http://127.0.0.1:8000/favicon.ico - Params: ImmutableMultiDict([]) - Body: 
+[2024-12-12 18:40:45,015] ERROR in app: Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/werkzeug/routing/map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+[2024-12-12 18:40:45,016] DEBUG in app: Response: 500 INTERNAL SERVER ERROR - Data: An error occurred
+[2024-12-12 18:40:45,017] INFO in _internal: 127.0.0.1 - - [12/Dec/2024 18:40:45] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+[2024-12-12 18:40:47,776] DEBUG in app: Request: GET http://127.0.0.1:8000/ - Params: ImmutableMultiDict([]) - Body: 
+[2024-12-12 18:40:47,777] ERROR in app: Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/werkzeug/routing/map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+[2024-12-12 18:40:47,778] DEBUG in app: Response: 500 INTERNAL SERVER ERROR - Data: An error occurred
+[2024-12-12 18:40:47,778] INFO in _internal: 127.0.0.1 - - [12/Dec/2024 18:40:47] "[35m[1mGET / HTTP/1.1[0m" 500 -
+[2024-12-12 18:40:47,803] DEBUG in app: Request: GET http://127.0.0.1:8000/favicon.ico - Params: ImmutableMultiDict([]) - Body: 
+[2024-12-12 18:40:47,804] ERROR in app: Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/werkzeug/routing/map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+[2024-12-12 18:40:47,805] DEBUG in app: Response: 500 INTERNAL SERVER ERROR - Data: An error occurred
+[2024-12-12 18:40:47,805] INFO in _internal: 127.0.0.1 - - [12/Dec/2024 18:40:47] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+[2024-12-12 18:42:12,351] DEBUG in app: Request: GET http://127.0.0.1:8000/films - Params: ImmutableMultiDict([]) - Body: 
+[2024-12-12 18:42:12,358] DEBUG in app: Response: 200 OK - Data: [
+  {
+    "dateRelease": "rwerwet",
+    "filmName": "qwrqwrq",
+    "genre": "ewrwer",
+    "id": 1,
+    "urlImage": 234
+  }
+]
+
+[2024-12-12 18:42:12,359] INFO in _internal: 127.0.0.1 - - [12/Dec/2024 18:42:12] "GET /films HTTP/1.1" 200 -
+[2024-12-12 18:44:57,760] DEBUG in app: Request: GET http://127.0.0.1:8000/set_log_level/DEBUG - Params: ImmutableMultiDict([]) - Body: 
+[2024-12-12 18:44:57,761] DEBUG in app: Response: 200 OK - Data: Log level set to DEBUG
+[2024-12-12 18:44:57,761] INFO in _internal: 127.0.0.1 - - [12/Dec/2024 18:44:57] "GET /set_log_level/DEBUG HTTP/1.1" 200 -
+[2024-12-12 18:46:18,383] DEBUG in app: Request: GET http://127.0.0.1:8000/some_route - Params: ImmutableMultiDict([]) - Body: 
+[2024-12-12 18:46:18,384] INFO in app: some_route took 0.0000 seconds
+[2024-12-12 18:46:18,384] DEBUG in app: Response: 200 OK - Data: Hello, World!
+[2024-12-12 18:46:18,384] INFO in _internal: 127.0.0.1 - - [12/Dec/2024 18:46:18] "GET /some_route HTTP/1.1" 200 -
+[2024-12-12 18:46:44,564] DEBUG in app: Request: GET http://127.0.0.1:8000/login/ - Params: ImmutableMultiDict([]) - Body: 
+[2024-12-12 18:46:44,565] ERROR in app: Exception: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/flask/ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/werkzeug/routing/map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+[2024-12-12 18:46:44,566] DEBUG in app: Response: 500 INTERNAL SERVER ERROR - Data: An error occurred
+[2024-12-12 18:46:44,566] INFO in _internal: 127.0.0.1 - - [12/Dec/2024 18:46:44] "[35m[1mGET /login/ HTTP/1.1[0m" 500 -
+[2024-12-12 18:47:46,903] DEBUG in app: Request: GET http://127.0.0.1:8000/login - Params: ImmutableMultiDict([]) - Body: 
+[2024-12-12 18:47:46,903] INFO in app: Successful login - User: username123 - IP: 127.0.0.1
+[2024-12-12 18:47:46,904] DEBUG in app: Response: 200 OK - Data: Logged in
+[2024-12-12 18:47:46,904] INFO in _internal: 127.0.0.1 - - [12/Dec/2024 18:47:46] "GET /login HTTP/1.1" 200 -
+[2024-12-12 18:48:24,325] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.119.106.254:8000
+[2024-12-12 18:48:24,325] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.119.106.254:8000
+[2024-12-12 18:48:24,325] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-12-12 18:48:24,325] [33mPress CTRL+C to quit[0m
+[2024-12-12 18:48:24,326]  * Restarting with stat
